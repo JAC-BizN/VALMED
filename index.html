@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Consultora PYMEs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            min-height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.7s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem; /* Added padding for better spacing on all slides */
+        }
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* --- SECCIÓN PARA LA IMAGEN DE FONDO --- */
+        .slide-1-bg {
+            background-image: url(imagenes/AdobeStock_638762316.jpeg); /* <-- Pega la URL de tu imagen aquí */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-800 text-slate-100 font-sans antialiased">
+    <main id="presentation-container" class="relative w-full h-screen overflow-hidden">
+        
+        <!-- Diapositiva 1: Portada -->
+        <section class="slide active slide-1-bg text-white text-center">
+            <!-- Capa oscura para legibilidad -->
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+            <!-- Contenido de la diapositiva -->
+            <div class="relative z-10">
+                <img src="imagenes/logo_valmed_blanco.png" alt="Logo de la Consultora" class="h-48 mx-auto mb-8">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Maximizamos tu Rentabilidad Optimizando tus Costos</h1>
+                <p class="text-xl md:text-2xl font-light">Transformamos tus desafíos en oportunidades de crecimiento sostenible.</p>
+            </div>
+        </section>
+
+        <!-- Diapositiva 2: Propuesta de Valor -->
+        <section class="slide bg-slate-900">
+            <div class="text-center">
+                <svg class="w-24 h-24 mx-auto mb-6 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">¿Sientes que tu margen de ganancia se reduce mes a mes?</h2>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">Te ayudamos a descubrir el potencial oculto en tus finanzas, convirtiendo gastos innecesarios en beneficios directos.</p>
+            </div>
+        </section>
+
+        <!-- Diapositiva 3: Problemas Comunes -->
+        <section class="slide">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Los Desafíos Ocultos en tu Operación</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl w-full">
+                 <div class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl h-full">
+                    <svg class="w-16 h-16 mb-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.092 1.21-.138 2.43-.138 3.662v4.286a4.006 4.006 0 003.7 3.7 48.678 48.678 0 007.324 0 4.006 4.006 0 003.7-3.7v-4.286zM12 15a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                    <h3 class="text-xl font-bold mb-2">Procesos Ineficientes</h3>
+                    <p class="text-slate-300">Operaciones que consumen más tiempo y dinero del necesario.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl h-full">
+                   <svg class="w-16 h-16 mb-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg>
+                    <h3 class="text-xl font-bold mb-2">Gastos Desordenados</h3>
+                    <p class="text-slate-300">Falta de visibilidad sobre dónde se va realmente el dinero.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl h-full">
+                    <svg class="w-16 h-16 mb-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m0-3l-3-3m0 0l-3 3m3-3v11.25m6-2.25h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75" />
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">Márgenes de Ganancia</h3>
+                    <p class="text-slate-300">Poca claridad sobre la rentabilidad real de productos o servicios.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl h-full">
+                    <svg class="w-16 h-16 mb-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h18M16.5 3L21 7.5m0 0L16.5 12M21 7.5H3" />
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">Flujo de Caja</h3>
+                    <p class="text-slate-300">Gestión desequilibrada que pone en riesgo la liquidez y estabilidad.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Diapositiva 4: Beneficios -->
+        <section class="slide flex-col md:flex-row items-center gap-12 bg-slate-900">
+            <div class="w-full md:w-1/2">
+                <h2 class="text-4xl md:text-7xl font-bold mb-6">Convierte tus Costos en tu Mayor Ventaja Competitiva</h2>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-start text-2xl"><span class="text-sky-400 mr-3 mt-1">✓</span> Aumento directo de la rentabilidad.</li>
+                    <li class="flex items-start text-2xl"><span class="text-sky-400 mr-3 mt-1">✓</span> Mayor control y predictibilidad financiera.</li>
+                    <li class="flex items-start text-2xl"><span class="text-sky-400 mr-3 mt-1">✓</span> Procesos internos más ágiles y eficientes.</li>
+                    <li class="flex items-start text-2xl"><span class="text-sky-400 mr-3 mt-1">✓</span> Crecimiento sostenible a largo plazo.</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                 <svg class="w-64 h-64 text-slate-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
+            </div>
+        </section>
+
+        <!-- Diapositiva 5: Quiénes Somos -->
+        <section class="slide flex-col items-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-center">Somos tu Aliado Estratégico en Crecimiento</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-6xl">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="relative w-64 h-48">
+                        <img src="imagenes/MAuro.jpeg" alt="Foto de Mauricio Medina" class="absolute top-4 -left-7 w-48 h-48 rounded-full ring-4 ring-slate-800 object-cover shadow-lg">
+                        <img src="imagenes/JAC.png" alt="Foto de Jose Alejandro Concha" class="absolute top-0 left-36 w-48 h-48 rounded-full ring-4 ring-slate-800 object-cover shadow-lg z-10">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <p class="text-lg text-slate-300 mb-6 text-justify">Nacimos para potenciar a las Empresas. No somos solo consultores; somos un equipo comprometido con tu éxito, que trabaja con total transparencia para entregar resultados medibles y sostenibles.</p>
+                    <div class="space-y-4 text-left">
+                        <div>
+                            <h3 class="font-bold text-sky-400">MAURICIO MEDINA</h3>
+                            <p class="text-base text-slate-300 text-justify">Ingeniero Comercial, Diplomado en Finanzas e Inversiones de la Universidad Adolfo Ibáñez. Con más de 15 años de experiencia laboral, destacando industria bancaria, servicios a la minería, liderando equipos en áreas comerciales, finanzas y operaciones. Se destaca experiencia en el clúster minero del norte de Chile y amplio nivel de relacionamiento colaborativo con empresas referentes en diversos sectores industriales.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sky-400">JOSE ALEJANDRO CONCHA</h3>
+                            <p class="text-base text-slate-300 text-justify">Experimentado Ingeniero Comercial y MBA de la Universidad de Chile, con más de 15 años de experiencia en gestión de empresas tecnológicas y consultoría estratégica. Especializado en liderar proyectos comerciales y operativos, fuertemente capacitado en mejorar procesos y desarrollar nuevas oportunidades de negocios. Expertise probada en cuentas claves y corporativas, con fuerte capacidad analítica y dominio de herramientas tecnológicas para maximizar la eficiencia. Sólidos conocimientos financieros y económicos, y un historial exitoso de adjudicación de proyectos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositiva 6: Modelo de Negocios -->
+        <section class="slide bg-slate-900">
+            <div class="text-center">
+                <svg class="w-24 h-24 mx-auto mb-6 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.153.24c-1.002 0-1.97-.23-2.816-.662l-2.62-1.072M5.25 4.97c-1.01.143-2.01.317-3 .52m3-.52l-2.62 10.726c-.122.499.106 1.028.589 1.202a5.988 5.988 0 002.153.24c1.002 0 1.97-.23 2.816-.662l2.62-1.072m0 0l-2.62 1.072" />
+                </svg>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Nuestro Modelo de Negocios</h2>
+                <div class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto text-justify">
+                    <p class="mb-4">Nuestra propuesta se basa en un esquema de éxito compartido que alinea directamente los resultados con el valor generado para el cliente.</p>
+                    <p class="mb-2"><strong>Optimización de costos:</strong> Se establece un análisis integral de los costos actuales de la empresa. A partir de las eficiencias identificadas, el cliente paga un porcentaje previamente acordado sobre los ahorros reales obtenidos. De esta forma, el pago está directamente vinculado a los resultados alcanzados.</p>
+                    <p class="mb-2"><strong>Fee por gastos operacionales:</strong> Para cubrir los recursos, herramientas y gestión continua del proyecto, se establece un fee fijo mensual. Este monto asegura la continuidad operativa del servicio y el soporte constante durante el proceso de implementación y seguimiento.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Diapositiva 7: Casos de Éxito -->
+        <section class="slide">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Resultados Reales: Así lo Viven Nuestros Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+                <div class="bg-slate-700/50 p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-sky-400 mb-2">-18%</p>
+                    <p class="text-lg">en gastos logísticos para empresas de alimentos.</p>
+                </div>
+                <div class="bg-slate-700/50 p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-sky-400 mb-2">+25%</p>
+                    <p class="text-lg">en flujo de caja para empresa de servicios.</p>
+                </div>
+                <div class="bg-slate-700/50 p-8 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-sky-400 mb-2">15%</p>
+                    <p class="text-lg">de ahorro anual en servicio de arriendo de maquinaria.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositiva 8: Clientes -->
+        <section class="slide">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Clientes que han confiado en nosotros</h2>
+            <div class="w-full max-w-4xl">
+                <div class="flex justify-center gap-8 mb-8">
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/BUSHO_B.png" alt="Logo Cliente 1" class="w-full h-full object-contain" style="transform: scale(2);">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/MAF_B.png" alt="Logo Cliente 2" class="w-full h-full object-contain" style="transform: scale(1.2);">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/HACFA_B.png" alt="Logo Cliente 3" class="w-full h-full object-contain" style="transform: scale(2.2);">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/QUICKTASTE_B.png" alt="Logo Cliente 4" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/EVOL_B.png" alt="Logo Cliente 5" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                <div class="flex justify-center gap-8">
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/MINSPA_B.png" alt="Logo Cliente 6" class="w-full h-full object-contain" style="transform: scale(1.2);">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/COLINAVERDE_B.png" alt="Logo Cliente 7" class="w-full h-full object-contain" style="transform: scale(2.0);">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/MRSGROUP_B.png" alt="Logo Cliente 8" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/STACATALINA_B.png" alt="Logo Cliente 9" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-28 h-28 rounded-full border-2 border-white bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagenes/GEOROCK_B.png" alt="Logo Cliente 10" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositiva 9: Contacto -->
+        <section class="slide text-center bg-slate-900">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">¿Listo para Crecer Reduciendo Costos?</h2>
+            <p class="text-xl mb-8">Hablemos de cómo podemos impulsar tu negocio.</p>
+            <div class="text-2xl space-y-4">
+                <a href="mailto:contacto@biznmed.cl" class="inline-flex items-center justify-center gap-2 group">
+                    <svg class="w-8 h-8 text-sky-400 group-hover:text-sky-300 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                    <span class="group-hover:text-sky-300 transition-colors">contacto@biznmed.cl</span>
+                </a>
+                <a href="tel:+56971071387" class="inline-flex items-center justify-center gap-2 group">
+                    <svg class="w-8 h-8 text-sky-400 group-hover:text-sky-300 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                    <span class="group-hover:text-sky-300 transition-colors">+56 9 7107 1387</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Navegación -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+        <button id="prevBtn" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+        </button>
+        <button id="nextBtn" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+        </button>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                slides.forEach((slide, index) => {
+                    if (index === n) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+            
+            // Inicia la presentación mostrando la primera diapositiva (índice 0)
+            showSlide(currentSlide);
+
+        });
+    </script>
+</body>
+</html>
+
